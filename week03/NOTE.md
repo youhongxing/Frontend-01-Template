@@ -94,8 +94,8 @@
 
 #### Reflection
 反射
-Reflect
-Proxy
+- Reflect
+- Proxy
 
 #### Internationalization
 - ECMAScript核心的附加功能，用于支持多语言处理。
