@@ -55,42 +55,42 @@
 
 #### Indexed collections
 对象表示按照索引值来排序的数据集合，包括数组和类型数组，以及类数组结构的对象。
-Array
-Int8Array
-Uint8Array
-Uint8ClampedArray
-Int16Array
-Uint16Array
-Int32Array
-Uint32Array
-Float32Array
-Float64Array
-BigInt64Array
-BigUint64Array
+- Array
+- Int8Array
+- Uint8Array
+- Uint8ClampedArray
+- Int16Array
+- Uint16Array
+- Int32Array
+- Uint32Array
+- Float32Array
+- Float64Array
+- BigInt64Array
+- BigUint64Array
 
 #### Keyed collections
 集合对象在存储数据时会使用到键，包括可迭代的Map 和 Set，支持按照插入顺序来迭代元素。
-Map
-Set
-WeakMap
-WeakSet
+- Map
+- Set
+- WeakMap
+- WeakSet
 
 #### Structured data
 用来表示和操作结构化的缓冲区数据，或使用 JSON （JavaScript Object Notation）编码的数据。
-ArrayBuffer
-SharedArrayBuffer 
-Atomics 
-DataView
-JSON
+- ArrayBuffer
+- SharedArrayBuffer 
+- Atomics 
+- DataView
+- JSON
 
 #### Control abstraction objects
 控制抽象对象
-Promise
-Generator
-GeneratorFunction
-AsyncFunction
-Iterator
-AsyncIterator
+- Promise
+- Generator
+- GeneratorFunction
+- AsyncFunction
+- Iterator
+- AsyncIterator
 
 #### Reflection
 反射
@@ -98,12 +98,12 @@ Reflect
 Proxy
 
 #### Internationalization
-ECMAScript核心的附加功能，用于支持多语言处理。
-Intl
-Intl.Collator
-Intl.DateTimeFormat
-Intl.ListFormat
-Intl.NumberFormat
-Intl.PluralRules
-Intl.RelativeTimeFormat
-Intl.Locale
+- ECMAScript核心的附加功能，用于支持多语言处理。
+- Intl
+- Intl.Collator
+- Intl.DateTimeFormat
+- Intl.ListFormat
+- Intl.NumberFormat
+- Intl.PluralRules
+- Intl.RelativeTimeFormat
+- Intl.Locale
