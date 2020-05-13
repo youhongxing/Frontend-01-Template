@@ -30,7 +30,8 @@ function convertStringToNumber(string, x) {
 
 function convertNumberToString(number, x) {
     var integer = Math.floor(number);
-    var fraction = number - integer;
+    var fraction = parseFloat((number - integer).toFixed(8));
+    
     
     var string = '';
     var decimal = '';
@@ -43,14 +44,20 @@ function convertNumberToString(number, x) {
         decimal = '.'
     }
 
-    while(fraction > 0) {
+    while(fraction > 0 && fraction < 1) {
+        console.log('fraction: '+fraction);
         decimal = decimal + Math.floor(fraction * x);
-        fraction = fraction * x - Math.floor(fraction * x);
+        let d = parseFloat((fraction * x).toFixed(8));
+        let c = Math.floor(fraction * x);
+        fraction = d - c;
+        if((d - c) < 0){
+            fraction = d;
+        }
     }
     return string + decimal;
 }
 
 
 
-console.log(convertStringToNumber("10.0123"));
+// console.log(convertStringToNumber("10.0123"));
 console.log(convertNumberToString(3.123, 10));
