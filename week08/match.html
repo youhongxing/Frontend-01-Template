@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>match</title>
+</head>
+<body>
+    <div class="class" id="id">
+        <div>match</div>
+    </div>
+</body>
+<script>
+    function match(selector, element) {
+        const isMatchClass = matchClassName(selector, element);
+        const isMatchId = matchIdSelector(selector, element);
+        const isMatchTagname = matchTagName(selector, element);
+        return isMatchClass && isMatchId && isMatchTagname;
+    }
+
+    function matchClassName(selector, element){
+        let flag = false;
+        element.className.split(/\s+/g).map(item=>{
+            item = '.'+ item;
+            if(selector.includes(item)){
+                flag = true;
+            }
+        })
+        return flag;  
+    }
+
+    function matchIdSelector(selector, element){
+        let flag = false;
+        element.id.split(/\s+/g).map(item=>{
+            item = '#'+ item;
+            if(selector.includes(item)){
+                flag = true;
+            }
+        })
+        return flag;  
+    }
+
+    function matchTagName(selector, element){
+        let flag = false;
+        element.tagName.split(/\s+/g).map(item=>{
+            if(selector.includes(item.toLowerCase())){ // 
+                flag = true;
+            }
+        })
+        return flag;  
+    }
+
+    
+    console.log(match("div #id.class", document.getElementById("id")));
+</script>
+</html>
